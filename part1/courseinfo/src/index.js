@@ -17,9 +17,9 @@ const Part = (d) => {
 const Content = (b) => {
   return (
     <>
-      <Part part={b[1].name} exercises={b[1].exercises} />
-      <Part part={b[2].name} exercises={b[2].exercises} />
-      <Part part={b[3].name} exercises={b[3].exercises} />
+      <Part part={b.parts[0].name} exercises={b.parts[0].exercises} />
+      <Part part={b.parts[1].name} exercises={b.parts[1].exercises} />
+      <Part part={b.parts[2].name} exercises={b.parts[2].exercises} />
     </>
   );
 };
@@ -27,7 +27,8 @@ const Total = (c) => {
   return (
     <>
       <p>
-        Number of exercises {c[1].exercises + c[2].exercises + c[3].exercises}
+        Number of exercises{" "}
+        {c.parts[0].exercises + c.parts[1].exercises + c.parts[2].exercises}
       </p>
     </>
   );
